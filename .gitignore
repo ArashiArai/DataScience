@@ -1,0 +1,47 @@
+# --- Python & uv ---
+# Virtual environments (created by uv)
+.venv/
+venv/
+env/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# uv specific
+.uv/
+# NOTE: Keep 'uv.lock'! It ensures reproducibility. Do not ignore it.
+
+# --- Data Science ---
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment variables (API keys, secrets)
+.env
+.env.local
+*.pem
+*.key
+
+# Large data files (Uncomment these if you don't want to track data)
+# Git is not designed for large binary files. 
+# If you have sample data you want to share, leave these commented.
+# If you have large datasets, uncomment them and use DVC or similar.
+# *.csv
+# *.parquet
+# *.h5
+# *.pkl
+# *.pt
+# *.pth
+# data/
+# datasets/
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS ---
+.DS_Store
+Thumbs.db

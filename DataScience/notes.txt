@@ -1,0 +1,27 @@
+List methods:
+.insert(index,"data")
+.append("data") #both return none
+.extend("any iterable")
+.remove(data)
+.pop()
+del list[0] #removes first item, can also be used to delete entire list
+.clear() #clears the entire list
+.sort(reverse=true)#for descending otherwise false/no need for ascending(default)
+
+list=list.copy()#returns a value
+list=list(list1) #also makes a copy 
+mylist = thislist[:]#also makes a copy
+
+list3 = list1 + list2
+
+
+
+Tuples:
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+(green, yellow, *red) = fruits #if no of variable less than tuples data put aestrik to make list
+
+
+Dictonary:
+.add()
+.update()
+.remove() and .discard():wont raise an error
