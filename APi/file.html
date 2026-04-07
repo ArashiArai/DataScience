@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test My API</title>
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: 50px auto; padding: 20px; }
+        button { width: 100%; margin: 10px 0; padding: 15px; background: #4CAF50; color: white; border: none; cursor: pointer; font-size: 16px; }
+        button:hover { background: #45a049; }
+        .result { background: #f4f4f4; padding: 15px; border-radius: 5px; margin-top: 20px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <h1>My FastAPI Test</h1>xq
+    
+    <button onclick="callRoot()">GET / (Hello World)</button>
+    <button onclick="callItems()">GET /items</button>
+    
+    <h3>Response:</h3>
+    <div id="result" class="result">Click a button to test...</div>
+
+    <script>
+        const BASE_URL = "http://127.0.0.1:8000";
+
+        async function callRoot() {
+            const result = document.getElementById('result');
+            result.textContent = 'Loading...';
+            try {
+                const response = await fetch(BASE_URL + "/");
+                const data = await response.json();
+                result.textContent = JSON.stringify(data, null, 2);
+            } catch (err) {
+                result.textContent = 'Error: ' + err.message + '\n\nMake sure FastAPI is running!';
+            }
+        }
+
+        async function callItems() {
+            const result = document.getElementById('result');
+            result.textContent = 'Loading...';
+            try {
+                const response = await fetch(BASE_URL + "/items");
+                const data = await response.json();
+                result.textContent = JSON.stringify(data, null, 2);
+            } catch (err) {
+                result.textContent = 'Error: ' + err.message + '\n\nMake sure FastAPI is running!';
+            }
+        }
+    </script>
+</body>
+</html>
